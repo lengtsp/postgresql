@@ -1,13 +1,14 @@
 # pip install psycopg2-binary
 import psycopg2
 try:
+    print('try')
     # Connect to your postgres DB
     connection = psycopg2.connect(
         host="localhost",
         port=5432,
-        database="threads",
-        user="postgres",
-        password="threads"
+        database="pg_database",
+        user="admin",
+        password="admin_passw0rd"
     )
 
     # Open a cursor to perform database operations
@@ -22,6 +23,7 @@ try:
     print('ผ่าน')
 
 except Exception as error:
+    print('except')
     print("Error while connecting to PostgreSQL", error)
     print('ไม่ผ่าน')
     
